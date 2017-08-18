@@ -6,4 +6,6 @@ var Nav = React.createClass({
       <h2>Nav Component</h2>  
     )
   }
-})
+});
+
+module.exports = Nav;
