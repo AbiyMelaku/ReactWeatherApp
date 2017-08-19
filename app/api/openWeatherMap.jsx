@@ -2,11 +2,9 @@ var axios = require('axios');
 
 const OPEN_WEATHER_MAP_URL = 'http://samples.openweathermap.org/data/2.5/weather?appid=1d412c3ae79dfe87b3a8eade7cac0854&units=imperial';
 
-//1d412c3ae79dfe87b3a8eade7cac0854
-
 module.exports = {
   getTemp: function(location){
-    var encodedLocation = encodedURILocation(location);
+    var encodedLocation = encodeURIComponent(location);
     var requestUrl = `${OPEN_WEATHER_MAP_URL}&q=${encodedLocation}`;
     
     axios.get(requestUrl).then(function(res){
@@ -18,5 +16,5 @@ module.exports = {
     }, function(res){
       throw newError(res.data.message);
     });
-  };
+  }
 }
