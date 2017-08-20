@@ -10,7 +10,8 @@ var About = require('About');
 var Examples = require('Examples');
 
 //Load Foundation (using the CSS loader and the style loader to inject CSS into our HTML)
-require('style!css!foundation-sites/dist/foundation.min.css')
+require('style-loader!css-loader!foundation-sites/dist/foundation.min.css')
+//require('style-loader!css-loader!foundation-sites/dist/css/foundation-float.min.css');
 //fire up foundation
 $(document).foundation();
 
