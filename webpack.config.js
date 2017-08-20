@@ -5,7 +5,7 @@ module.exports = {
   //specify the input
   entry: [
   'script!jquery/dist/jquery.min.js',
-  'script!foundation-sites/dist/foundation.min.js'
+  'script!foundation-sites/dist/foundation.min.js',
   './app/app.jsx',
   ],
   
@@ -17,7 +17,7 @@ module.exports = {
     new webpack.ProvidePlugin({
       '$': 'jquery',
       'jQuery': 'jquery'
-    });
+    })
   ],  
   //specify the output
   output: {
