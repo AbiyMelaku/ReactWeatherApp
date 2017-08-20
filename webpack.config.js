@@ -1,8 +1,24 @@
+var webpack = require('webpack');
+
 module.exports = {
   
   //specify the input
-  entry: './app/app.jsx',
+  entry: [
+  'script!jquery/dist/jquery.min.js',
+  'script!foundation-sites/dist/foundation.min.js'
+  './app/app.jsx',
+  ],
   
+  externals: {
+    jquery: 'jQuery'
+  },
+  
+  plugins: [
+    new webpack.ProvidePlugin({
+      '$': 'jquery',
+      'jQuery': 'jquery'
+    });
+  ],  
   //specify the output
   output: {
     //set two properties on the object
