@@ -9,6 +9,8 @@ var About = (props) => {
       <p>The API is <a href="http://openweathermap.org/">Open Weather Map</a>.
       Sign up is free and easy! </p>
       
+      <p>Checkout my code in my <a href="https://github.com/AbiyMelaku/ReactWeatherApp">Github</a>.</p>
+      
     </div>
   )
 }
